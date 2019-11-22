@@ -6,3 +6,5 @@ I used xampp because it is easy. Put the files in a folder and add the folder
 into the htdocs folder in the xampp folder in the C: drive. 
 Open the xampp control panel in that same xampp folder and start the apache 
 and mysql server and run it. 
+
+these instructions are not thourogh so that means it is not ready.
