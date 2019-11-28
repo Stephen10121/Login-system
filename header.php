@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Cloud Storage</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran|Cormorant+Garamond&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="img/cool.ico" type="image/x-icon">
 </head>
 <body>
@@ -22,7 +23,7 @@
                 <?php
                     if (isset($_SESSION['userId'])) {
                         echo '<li><form action="includes/logout.inc.php" method="post" id="logoutform" class="logoutform">
-                        <button type="submit" name="logout-submit" class="button">Logout</button>
+                        <button type="submit" name="logout-submit" id="device-logout-button"class="button">Logout</button>
                     </form></li>';
                     } 
                     else {

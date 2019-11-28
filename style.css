@@ -65,10 +65,10 @@ header .login-signup {
 
 #logout-button {
     float: right;
-    margin-top: 20px;
+    margin-top: 17px;
 }
-
-.logoutform {
+#device-logout-button {
+    display: block;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -126,6 +126,9 @@ header .login-signup {
         display: block;
     }
 
+    #device-logout-button {
+        display: none;
+    }
 
 }
 
@@ -187,8 +190,8 @@ header .login-signup {
 }
 
 .device-login {
-    display: block;
-    margin: auto 0;
+    display: inline-block;
+    margin: 0 auto;
     text-align: center;
 }
 

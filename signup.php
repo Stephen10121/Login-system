@@ -26,7 +26,7 @@ require "header.php";
                         echo '<p>Username is already taken</p>';
                     }
                 } else if ($_GET['signup'] == "success") {
-                    echo '<p>Signup successful</p>';
+                    header("Location:  ../Login-system/index.php");
                 }
             ?>
                 <form action="includes/signup.inc.php" method="post">
