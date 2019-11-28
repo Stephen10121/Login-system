@@ -9,41 +9,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Cloud Storage</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/cool.ico" type="image/x-icon">
 </head>
 <body>
-    <div class="grid">
-        <div class="header">
-            <div class="logolist">
-                <a href="index.php">
-                    <div id="logo">
-                        <img src="img/logo.png" alt="logo " id="logo">
-                    </div>
-                </a>
-                <div id="homelist">
-                    <ul>
-                        <li><a href="index.php" class="button">Home</a></li>
-                        <li><a href="#" class="button">Portfolio</a></li>
-                        <li><a href="#" class="button">About Me</a></li>
-                        <li><a href="#" class="button">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="formthing">
+    <header>
+        <a href="index.php" class="header-brand">Cloud Storage</a>
+        <nav>
+            <ul>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
                 <?php
                     if (isset($_SESSION['userId'])) {
-                        echo '<form action="includes/logout.inc.php" method="post" id="logoutform">
-                        <button type="submit" name="logout-submit" >Logout</button>
-                    </form>';
+                        echo '<li><form action="includes/logout.inc.php" method="post" id="logoutform" class="logoutform">
+                        <button type="submit" name="logout-submit" class="button">Logout</button>
+                    </form></li>';
                     } 
                     else {
-                        echo '<form action="includes/login.inc.php" method="post" id="loginform">
-                        <input type="text" name="mailuid" placeholder="Username/E-mail..." class="textbox">
-                        <input type="password" name="pwd" placeholder="Password..." class="textbox">
-                        <button type="submit" name="login-submit" >Login</button>
-                    </form>
-                    <a href="signup.php" >Signup</a>';
-                    }
+                    }      
                 ?>
+            </ul>
+            <div class="login-signup">
+                <ul>
+                    <?php
+                        if (isset($_SESSION['userId'])) {
+                            echo '<li><form action="includes/logout.inc.php" method="post" id="logoutform" class="logoutform">
+                            <button type="submit" class="button" name="logout-submit" id="logout-button">Logout</button>
+                        </form></li>';
+                        } 
+                        else {
+                            echo '<li><form action="includes/login.inc.php" method="post" id="loginform" class="loginform">
+                            <input type="text" name="mailuid" placeholder="Username/E-mail..." class="textbox">
+                            <input type="password" name="pwd" placeholder="Password..." class="textbox">
+                            <button type="submit" class="button" name="login-submit" >Login</button>
+                        </form></li>
+                        
+                        <li><a href="signup.php" class="button" id="signup-button">Signup</a></li>';
+                        }
+                    ?>
+                </ul>
             </div>
-        </div>
+        </nav>
+    </header>
